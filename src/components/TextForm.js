@@ -28,8 +28,8 @@ export default function TextForm(props) {
 
   const handleNumberExtraction = () => {
     console.log("Numbers Extracted");
-    let extractedNumbers = text.split(/[A-Za-z]/);
-    setNumbers(extractedNumbers); //using regex
+    let extractedNumbers = text.replace(/[^0-9]/g, ''); //using regex
+    setNumbers(extractedNumbers); 
     props.showAlert('Numbers Extracted','success')
   };
 
