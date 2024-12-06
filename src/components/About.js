@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function About() {
+export default function About(props) {
   return (
     <div className="container">
-      <h2 className="my-2"> About Us</h2>
+      <h2 className="my-2"> {props.aboutText}</h2>
       <div className="accordion" id="accordionExample">
         <div className="accordion-item">
           <h2 className="accordion-header">
@@ -15,7 +15,7 @@ export default function About() {
               aria-expanded="true"
               aria-controls="collapseOne"
             >
-              About TextUtils
+              <b>About TextUtils</b> 
             </button>
           </h2>
           <div
@@ -49,7 +49,7 @@ export default function About() {
               aria-expanded="false"
               aria-controls="collapseTwo"
             >
-              About the Programmer
+              <b>About the Programmer</b>
             </button>
           </h2>
           <div
@@ -72,7 +72,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="accordion-item">
+        <div className={`accordion-item`}>
           <h2 className="accordion-header">
             <button
               className="accordion-button collapsed"
@@ -82,7 +82,7 @@ export default function About() {
               aria-expanded="false"
               aria-controls="collapseThree"
             >
-              About React JS
+             <b> About React JS</b>
             </button>
           </h2>
           <div
